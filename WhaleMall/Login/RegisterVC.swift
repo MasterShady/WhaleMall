@@ -154,9 +154,9 @@ class RegisterVC: BaseVC {
         policyLabel.attributedText = text
         policyLabel.textTapAction = {[weak self] _,_,range,_  in
             if ((raw as NSString).range(of: t1).intersection(range) != nil) {
-                UIApplication.shared.open(URL(string: "https://www.freeprivacypolicy.com/live/a686460b-8ff1-4025-bb8f-f6c7dbcf1da7")!)
+                UIApplication.shared.open(URL(string: "https://www.freeprivacypolicy.com/live/4203b27f-4633-4b7c-bc4d-6ce1a8cfd28e")!)
             }else if (raw as NSString).range(of: t2).intersection(range) != nil{
-                UIApplication.shared.open(URL(string: "https://www.freeprivacypolicy.com/live/a686460b-8ff1-4025-bb8f-f6c7dbcf1da7")!)
+                UIApplication.shared.open(URL(string: "https://www.freeprivacypolicy.com/live/4203b27f-4633-4b7c-bc4d-6ce1a8cfd28e")!)
             }
         }
         

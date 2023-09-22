@@ -229,9 +229,11 @@ class WishListVC: BaseVC {
         makeWishBtn.chain.normalImage(.init(named: "make_wish_list"))
         
         makeWishBtn.addBlock(for: .touchUpInside) {[weak self] _ in
-            let vc = CreatePostVC()
-            let nav = NavVC(rootViewController: vc)
-            self?.present(nav, animated: true)
+            UserStore.checkLoginStatusThen {
+                let vc = CreatePostVC()
+                let nav = NavVC(rootViewController: vc)
+                self?.present(nav, animated: true)
+            }
         }
         
     }
