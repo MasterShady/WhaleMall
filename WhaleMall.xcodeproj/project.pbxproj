@@ -112,6 +112,7 @@
 		EB27DFE82AB7F25C001DDBB9 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB27DFE62AB7F25C001DDBB9 /* RegisterVC.swift */; };
 		EB27DFE92AB7F25C001DDBB9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB27DFE72AB7F25C001DDBB9 /* LoginVC.swift */; };
 		EBE153F82AB81F0800A2C7A9 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE153F72AB81F0800A2C7A9 /* ProductDetailVC.swift */; };
+		EBF1A13A2AC12B1500825533 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF1A1392AC12B1500825533 /* ReportView.swift */; };
 		F7F2FD880A7874B1FD178326 /* Pods_WhaleMall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 896914C73058871D87FDC8D0 /* Pods_WhaleMall.framework */; };
 /* End PBXBuildFile section */
 
@@ -233,6 +234,7 @@
 		EB27DFE62AB7F25C001DDBB9 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		EB27DFE72AB7F25C001DDBB9 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		EBE153F72AB81F0800A2C7A9 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
+		EBF1A1392AC12B1500825533 /* ReportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -512,6 +514,7 @@
 		EB27DFA32AB1A553001DDBB9 /* WishList */ = {
 			isa = PBXGroup;
 			children = (
+				EBF1A1392AC12B1500825533 /* ReportView.swift */,
 				EB1D0A3F2AB9845100751300 /* CreatePostVC.swift */,
 				EB27DFA42AB1A563001DDBB9 /* WishListVC.swift */,
 				EB1D0A432ABAF4BE00751300 /* WishDetailVC.swift */,
@@ -726,6 +729,7 @@
 				EB1D0A2D2AB946FC00751300 /* OrderConfirmView.swift in Sources */,
 				EB27DF9F2AB1A53B001DDBB9 /* HomeVC.swift in Sources */,
 				EB27DFB12AB1BA7D001DDBB9 /* BaseAPI.swift in Sources */,
+				EBF1A13A2AC12B1500825533 /* ReportView.swift in Sources */,
 				EB27DF752AB1A4B9001DDBB9 /* MonthPicker.swift in Sources */,
 				EB27DF652AB1A4B9001DDBB9 /* NSAttributedString+Extensions.swift in Sources */,
 				EB27DF8E2AB1A4B9001DDBB9 /* Aspects.m in Sources */,
@@ -966,7 +970,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 6475J8L3PC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WhaleMall/Info.plist;
@@ -1007,7 +1011,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = RANUTC7N44;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -7,6 +7,7 @@
 
 import UIKit
 import MJRefresh
+import FTPopOverMenu_Swift
 
 func finessDiscirption(_ finess: Int) -> String{
     if finess == 8{
@@ -20,6 +21,22 @@ func finessDiscirption(_ finess: Int) -> String{
     }
     return "成色不限"
 }
+
+
+class PostBlackListManager {
+    
+    static var blackList : [Int] {
+        return UserDefaults.standard.array(forKey: "PostBlackList") as? [Int] ?? [Int]()
+    }
+    
+    static func addPost(id : Int){
+        var list = self.blackList
+        list.append(id)
+        UserDefaults.standard.set(list, forKey: "PostBlackList")
+        UserDefaults.standard.synchronize()
+    }
+}
+
 
 class WishCell: UITableViewCell{
     
@@ -65,6 +82,8 @@ class WishCell: UITableViewCell{
     var timeLabel: UILabel!
     var countLabel: UILabel!
     
+    var menuClickHandler : IntBlock?
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.configSubview()
@@ -100,9 +119,21 @@ class WishCell: UITableViewCell{
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(14)
             make.left.equalTo(cover.snp.right).offset(14)
-            make.right.equalTo(-14)
+            //make.right.equalTo(-14)
         }
         titleLabel.chain.text(color: .kTextBlack).font(.semibold(14)).numberOfLines(2)
+        
+        
+        let reportBtn = UIButton()
+        container.addSubview(reportBtn)
+        reportBtn.snp.makeConstraints { make in
+            make.left.equalTo(titleLabel.snp.right).offset(5)
+            make.right.equalTo(-14)
+            make.bottom.equalTo(titleLabel.snp.firstBaseline)
+            make.width.height.equalTo(16)
+        }
+        reportBtn.chain.normalImage(.init(named: "more"))
+        reportBtn.addTarget(self, action: #selector(moreAction), for: .touchUpInside)
         
         contentTitleLabel = .init()
         container.addSubview(contentTitleLabel)
@@ -157,6 +188,22 @@ class WishCell: UITableViewCell{
         }
         countLabel.chain.text(color: .kTextDrakGray).font(.normal(12))
     }
+    
+    
+    @objc func moreAction(sender: UIButton){
+        let configuration = FTConfiguration()
+        configuration.textAlignment = .center
+        FTPopOverMenu.showForSender(sender: sender,
+                                    with: ["举报", "不喜欢"],
+                                    config: configuration,
+                                    done: {[weak self] (selectedIndex) -> () in
+            
+            self?.menuClickHandler?(selectedIndex)
+        }) {
+            
+        }
+    }
+    
 }
 
 class WishListVC: BaseVC {
@@ -179,7 +226,11 @@ class WishListVC: BaseVC {
         userService.request(.goodsList(data_type: 1)) {[weak self] result in
             self?.tableView.mj_header?.endRefreshing()
             result.hj_map2(Product.self) { body in
-                self?.productListRelay.accept(body.decodedObjList!)
+                let rawList = body.decodedObjList!
+                let filteredList = rawList.filter { product in
+                    return !PostBlackListManager.blackList.contains(product.id)
+                }
+                self?.productListRelay.accept(filteredList)
             }
         }
     }
@@ -206,6 +257,35 @@ class WishListVC: BaseVC {
         
         productListRelay.bind(to: tableView.rx.items(cellIdentifier: "cellId", cellType: WishCell.self)) {index, element ,cell in
             cell.product = element
+            cell.menuClickHandler = { [weak self] index in
+                guard let self = self else {return}
+                if index == 0{
+                    //举报
+                    let reportView = ReportView()
+                    reportView.dismissHandler = {[weak self] result in
+                        guard let self = self else {return}
+                        if result{
+                            PostBlackListManager.addPost(id: element.id)
+                            "感谢您的反馈,我们将进行审核".hint()
+                            let rawList = self.productListRelay.value
+                            let filteredList = rawList.filter { product in
+                                return !PostBlackListManager.blackList.contains(product.id)
+                            }
+                            self.productListRelay.accept(filteredList)
+                        }
+                    }
+                    reportView.popView(fromDirection: .center, tapToDismiss: false)
+                }else{
+                    //不喜欢
+                    PostBlackListManager.addPost(id: element.id)
+                    "感谢您的反馈,我们将减少此类推荐".hint()
+                    let rawList = self.productListRelay.value
+                    let filteredList = rawList.filter { product in
+                        return !PostBlackListManager.blackList.contains(product.id)
+                    }
+                    self.productListRelay.accept(filteredList)
+                }
+            }
         }.disposed(by: disposeBag)
         
         tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { [weak self] in
@@ -236,5 +316,9 @@ class WishListVC: BaseVC {
             }
         }
         
+    }
+    
+    deinit {
+        printLog("die")
     }
 }

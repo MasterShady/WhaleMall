@@ -30,6 +30,38 @@
             endingLineNumber = "88"
             landmarkName = "rxFatalErrorInDebug(_:file:line:)"
             landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "9DDBF942-983E-4ED0-AE97-6BA959F74266 - 83d57a20c0abe52f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RxCocoa.rxFatalErrorInDebug(_: @autoclosure () -&gt; Swift.String, file: Swift.StaticString, line: Swift.UInt) -&gt; ()"
+                  moduleName = "RxCocoa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/development/DF/WhaleMall/Pods/RxCocoa/RxCocoa/RxCocoa.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "9DDBF942-983E-4ED0-AE97-6BA959F74266 - 83d57a20c0abe52f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RxCocoa.rxFatalErrorInDebug(_: @autoclosure () -&gt; Swift.String, file: Swift.StaticString, line: Swift.UInt) -&gt; ()"
+                  moduleName = "RxCocoa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/development/DF/WhaleMall/Pods/RxCocoa/RxCocoa/RxCocoa.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -46,6 +78,38 @@
             endingLineNumber = "100"
             landmarkName = "bind(onNext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6684105D-8146-4DA1-B452-AE45047A9DF8 - dfdac39128054d3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Error) -&gt; () in RxSwift.ObservableType.bind(onNext: (&#x3c4;_0_0.Element) -&gt; ()) -&gt; RxSwift.Disposable"
+                  moduleName = "RxCocoa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/development/DF/WhaleMall/Pods/RxCocoa/RxCocoa/Common/Observable+Bind.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  uuid = "6684105D-8146-4DA1-B452-AE45047A9DF8 - dfdac39128054d3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Error) -&gt; () in RxSwift.ObservableType.bind(onNext: (&#x3c4;_0_0.Element) -&gt; ()) -&gt; RxSwift.Disposable"
+                  moduleName = "RxCocoa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/development/DF/WhaleMall/Pods/RxCocoa/RxCocoa/Common/Observable+Bind.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,6 +126,38 @@
             endingLineNumber = "85"
             landmarkName = "bind(with:onNext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A8CCE85C-38DD-462D-BCCA-B54C2B34061F - eb1295f751f4dc5b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Error) -&gt; () in RxSwift.ObservableType.bind&lt;&#x3c4;_0_0 where &#x3c4;_1_0: AnyObject&gt;(with: &#x3c4;_1_0, onNext: (&#x3c4;_1_0, &#x3c4;_0_0.Element) -&gt; ()) -&gt; RxSwift.Disposable"
+                  moduleName = "RxCocoa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/development/DF/WhaleMall/Pods/RxCocoa/RxCocoa/Common/Observable+Bind.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  uuid = "A8CCE85C-38DD-462D-BCCA-B54C2B34061F - eb1295f751f4dc5b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Error) -&gt; () in RxSwift.ObservableType.bind&lt;&#x3c4;_0_0 where &#x3c4;_1_0: AnyObject&gt;(with: &#x3c4;_1_0, onNext: (&#x3c4;_1_0, &#x3c4;_0_0.Element) -&gt; ()) -&gt; RxSwift.Disposable"
+                  moduleName = "RxCocoa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liusiyuan/development/DF/WhaleMall/Pods/RxCocoa/RxCocoa/Common/Observable+Bind.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

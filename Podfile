@@ -27,6 +27,7 @@ target 'WhaleMall' do
   pod 'CLImagePickerTool'
   pod 'ThinkingSDK','2.8.3.2'
   pod 'Meiqia'
+  pod 'FTPopOverMenu_Swift', '~> 0.4.3'
 
 
 end

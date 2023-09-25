@@ -3,6 +3,7 @@ PODS:
   - CLImagePickerTool (3.1.3)
   - EmptyDataSet-Swift (5.0.0)
   - ETNavBarTransparent (1.1.3)
+  - FTPopOverMenu_Swift (0.4.3)
   - HandyJSON (5.0.2)
   - IQKeyboardManagerSwift (6.3.0)
   - JXPagingView/Paging (2.1.2)
@@ -73,6 +74,7 @@ DEPENDENCIES:
   - CLImagePickerTool
   - EmptyDataSet-Swift (~> 5.0.0)
   - ETNavBarTransparent
+  - FTPopOverMenu_Swift (~> 0.4.3)
   - HandyJSON
   - IQKeyboardManagerSwift (= 6.3.0)
   - JXPagingView/Paging
@@ -98,6 +100,7 @@ SPEC REPOS:
     - CLImagePickerTool
     - EmptyDataSet-Swift
     - ETNavBarTransparent
+    - FTPopOverMenu_Swift
     - HandyJSON
     - IQKeyboardManagerSwift
     - JXPagingView
@@ -131,6 +134,7 @@ SPEC CHECKSUMS:
   CLImagePickerTool: 2ef59c6524efd493571a0ee2bc42f445b4c5b2cb
   EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
   ETNavBarTransparent: dd05fd593b31d5d786e05631149ceea1e13b30ef
+  FTPopOverMenu_Swift: 85ac1c04b04f6b4ac394414602c6a71ef3f66cc2
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
   JXPagingView: 90924b364a2ff7e94db534fad1fa50925ff69ee4
@@ -151,6 +155,6 @@ SPEC CHECKSUMS:
   Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
   YYKit: 9ac092a14e3d5af709b707479bdb76b96a62fb41
 
-PODFILE CHECKSUM: 345cce885b95aced343dd89ee89be6a99ed9c542
+PODFILE CHECKSUM: 219e17207dd027ccd3e7e3d2b4da5261208abf4c
 
 COCOAPODS: 1.12.1
