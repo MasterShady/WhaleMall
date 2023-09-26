@@ -106,7 +106,7 @@ class CreatePostVC: BaseVC {
         }
         
         
-        _ = imagesRelay.subscribe {[weak self] value in
+        imagesRelay.subscribe {[weak self] value in
             guard let self = self else {return}
             self.imageStackView.removeAllSubviews()
             
