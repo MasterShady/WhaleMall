@@ -194,7 +194,7 @@ class WishCell: UITableViewCell{
         let configuration = FTConfiguration()
         configuration.textAlignment = .center
         FTPopOverMenu.showForSender(sender: sender,
-                                    with: ["举报", "不喜欢"],
+                                    with: ["举报", "不看该用户","不喜欢"],
                                     config: configuration,
                                     done: {[weak self] (selectedIndex) -> () in
             
@@ -276,9 +276,16 @@ class WishListVC: BaseVC {
                     }
                     reportView.popView(fromDirection: .center, tapToDismiss: false)
                 }else{
+                    var msg = ""
+                    if index == 1{
+                        msg = "已经屏蔽该用户,您将不会收到该用户的求购信息"
+                    }else{
+                        msg = "感谢您的反馈,我们将减少此类推荐"
+                    }
+                    
                     //不喜欢
                     PostBlackListManager.addPost(id: element.id)
-                    "感谢您的反馈,我们将减少此类推荐".hint()
+                    msg.hint()
                     let rawList = self.productListRelay.value
                     let filteredList = rawList.filter { product in
                         return !PostBlackListManager.blackList.contains(product.id)
